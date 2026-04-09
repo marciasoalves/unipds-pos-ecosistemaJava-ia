@@ -1,13 +1,26 @@
 package mx.florinda.cardapio;
 
+import com.google.gson.Gson;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+import java.math.BigDecimal;
+
+import static mx.florinda.cardapio.ItemCardapio.CategoriaCardapio.BEBIDAS;
 
 @SpringBootApplication
 public class CardapioApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(CardapioApplication.class, args);
+		ItemCardapio refrescoDoChaves = new ItemCardapio(1L, "Refresco do Chaves", """
+                Suco de limão que parece tamarindo e tem gosto de groselha
+                """, BEBIDAS,
+				new BigDecimal("2.99"), null);
+
+		Gson gson = new Gson();
+		String json = gson.toJson(refrescoDoChaves);
+
+		System.out.println(json);
 	}
 
 }
