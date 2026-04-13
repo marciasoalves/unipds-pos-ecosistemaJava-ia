@@ -6,6 +6,7 @@ import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
 
 public class ClienteItensCardapio {
+
     public static void main(String[] args) throws Exception {
 
         URI uri = URI.create("http://localhost:8000/itensCardapio.json");

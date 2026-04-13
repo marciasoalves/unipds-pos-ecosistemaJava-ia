@@ -6,6 +6,7 @@ import java.util.Optional;
 import java.util.WeakHashMap;
 
 public class HistoricoVisualizacao {
+
     private Map<ItemCardapio, LocalDateTime> visualizacoes = new WeakHashMap<>();
     private final Database database;
 

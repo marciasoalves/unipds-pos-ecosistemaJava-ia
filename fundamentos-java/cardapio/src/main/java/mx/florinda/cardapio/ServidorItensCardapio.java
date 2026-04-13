@@ -10,6 +10,7 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 
 public class ServidorItensCardapio {
+
     public static void main(String[] args) throws IOException {
         InetSocketAddress inetSocketAddress = new InetSocketAddress(8000);
         HttpServer httpServer = HttpServer.create(inetSocketAddress, 0);
