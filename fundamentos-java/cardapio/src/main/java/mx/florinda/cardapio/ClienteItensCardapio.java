@@ -11,6 +11,7 @@ public class ClienteItensCardapio {
 
         URI uri = URI.create("http://localhost:8000/itensCardapio.json");
 
+
         try(HttpClient httpClient = HttpClient.newHttpClient()) {
             HttpRequest httpRequest = HttpRequest.newBuilder(uri).build();
             HttpResponse<String> httpResponse = httpClient.send(httpRequest,
